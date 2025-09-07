@@ -1,0 +1,184 @@
+/* Global body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee); /* pastel pink to purple */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 150px; /* more top spacing */
+  box-sizing: border-box;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px 20px;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+  overflow: hidden; /* prevent overflow */
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 3px #fff;
+  letter-spacing: 1px;
+}
+
+/* Form */
+.post-form input,
+.post-form textarea,
+.post-form button,
+.post-form input[type="file"] {
+  width: 100%;
+  max-width: 100%;
+  margin: 12px 0;
+  padding: 14px 15px;
+  font-size: 16px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Inputs */
+.post-form input,
+.post-form textarea {
+  background: #f7f7f7;
+  color: #333;
+  font-weight: 500;
+}
+
+.post-form input:focus,
+.post-form textarea:focus {
+  box-shadow: 0 0 0 4px rgba(255, 154, 154, 0.3);
+  background: #fff;
+}
+
+/* Button */
+.post-form button {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3); /* pink gradient */
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.post-form button:hover {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  transform: translateY(-2px);
+}
+
+/* Post List */
+.post-list {
+  margin-top: 25px;
+}
+
+/* Post Card */
+.post-card {
+  background: linear-gradient(120deg, #a1c4fd, #c2e9fb); /* blue gradient */
+  padding: 18px 22px;
+  margin: 15px 0;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+/* Post Title & Content */
+.post-card h3 {
+  margin: 0 0 5px 0;
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.post-card h3::before {
+  content: '📌'; /* pin icon before title */
+  margin-right: 8px;
+}
+
+.post-card p {
+  margin: 5px 0 10px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.post-card small {
+  color: rgba(255, 255, 255, 0.85);
+  font-style: italic;
+}
+
+/* Post Image */
+.post-photo {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 10px 0;
+}
+
+/* Delete Button */
+.post-card button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255,255,255,0.85);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.post-card button:hover {
+  background: #fff;
+  color: #ff4d6d;
+  transform: scale(1.15);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 25px 15px;
+  }
+  .post-form input,
+  .post-form textarea,
+  .post-form button,
+  .post-form input[type="file"] {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  .post-card {
+    padding: 15px 18px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
